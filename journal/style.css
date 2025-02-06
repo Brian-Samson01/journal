@@ -6,7 +6,7 @@ nav{
     padding: 20px;
     border-bottom: 1px solid #eaeaea;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 nav a{
     font-size: 14px;
@@ -60,7 +60,6 @@ a:hover{
     margin: 80px 0;
     display: flex;
     justify-content: space-around;
-    overflow-y: hidden;
 }
 .card{
     height: 250px;
@@ -69,6 +68,7 @@ a:hover{
     border-radius: 20px;
     padding: 20px;
     margin: 0 20px;
+    position: relative;
 }
 .card div{
     display: flex;
@@ -94,3 +94,26 @@ a:hover{
 .card:nth-child(4){
     background-color: #80a39c;
 }
+.card > img{
+    position: absolute;
+    bottom: -40px;
+    right: -30px;
+}
+.menu_icon{
+    display: none;
+}
+/* only for devices between 0 and 600px */
+@media screen and (max-width: 600px) {
+    nav a:not(:first-child)    {
+        color: red;
+        display: none;
+    }
+    .menu_icon{
+        width: 50px;
+        height: 50px;
+        display: block;
+    }
+    nav{
+        justify-content: space-between;
+    }
+  }
